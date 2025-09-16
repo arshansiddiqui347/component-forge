@@ -16,7 +16,7 @@ This project is built with **HTML, CSS, and JavaScript** and hosted on GitHub Pa
 - ⏳ Navbar (coming soon)
 
 ## Live Demo
-👉 [Visit ComponentForge](https://yourusername.github.io/component-forge/)
+👉 [Visit ComponentForge](https://arshansiddiqui347.github.io/component-forge/)
 
 ## Author
-Built with ❤️ by [Your Name](https://github.com/yourusername)
+Built with ❤️ by ARSHAN
