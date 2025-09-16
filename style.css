@@ -269,4 +269,17 @@ code {
 
 .footer a:hover {
     text-decoration: underline;
+} 
+#codetodesign input[type="file"] {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background: #1a1a2e;
+    color: #f1f1f1;
 }
+
+#codetodesign #generateBtn {
+    margin-bottom: 1.5rem;
+}
+
