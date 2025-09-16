@@ -122,6 +122,29 @@
     </div>
 </section>
 
+<section id="codetodesign" class="component-section">
+    <h2>Code to Design 🔥</h2>
+    
+    <p>Describe a UI component, and get HTML/CSS code!</p>
+
+    <!-- Text Input -->
+    <textarea id="uiDescription" placeholder="E.g., A blue rounded primary button saying 'Submit'..." rows="3" style="width:100%; padding:0.5rem;"></textarea>
+
+    <!-- Generate Button -->
+    <button id="generateBtn" class="btn-primary">Generate Code</button>
+
+    <!-- Preview & Code -->
+    <div class="component-showcase">
+        <div class="preview-box">
+            <h3>Preview</h3>
+            <div id="generatedPreview" class="preview-content"></div>
+        </div>
+        <div class="code-box">
+            <h3>Code <button class="copy-btn" onclick="copyCode('generatedCode')">Copy</button></h3>
+            <pre><code id="generatedCode" class="language-html"></code></pre>
+        </div>
+    </div>
+</section>
 
         <!-- Add more sections for Grid and Navbar here -->
 
