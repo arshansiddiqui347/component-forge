@@ -98,6 +98,31 @@
             </div>
         </section>
 
+        <section id="codetodesign" class="component-section">
+    <h2>Code to Design 🔥</h2>
+    
+    <p>Upload a screenshot of a UI component, and get HTML/CSS code!</p>
+
+    <!-- Upload Input -->
+    <input type="file" id="imageUpload" accept="image/*">
+
+    <!-- Generate Button -->
+    <button id="generateBtn" class="btn-primary">Generate Code</button>
+
+    <!-- Preview & Code -->
+    <div class="component-showcase">
+        <div class="preview-box">
+            <h3>Preview</h3>
+            <div id="generatedPreview" class="preview-content"></div>
+        </div>
+        <div class="code-box">
+            <h3>Code <button class="copy-btn" onclick="copyCode('generatedCode')">Copy</button></h3>
+            <pre><code id="generatedCode" class="language-html"></code></pre>
+        </div>
+    </div>
+</section>
+
+
         <!-- Add more sections for Grid and Navbar here -->
 
     </main>
