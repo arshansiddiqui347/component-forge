@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComponentForge - Learn, Copy, Build</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">ComponentForge</h1>
+            <ul class="nav-menu">
+                <li><a href="#buttons" class="nav-link">Buttons</a></li>
+                <li><a href="#cards" class="nav-link">Cards</a></li>
+                <li><a href="#grid" class="nav-link">Grid</a></li>
+                <li><a href="#navbar" class="nav-link">Navbar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Build UIs Faster</h1>
+            <p>Copy, edit, and preview ready-to-use components. Learn by doing.</p>
+        </section>
+
+        <!-- Buttons Section -->
+        <section id="buttons" class="component-section">
+            <h2>Button Components</h2>
+            <div class="component-showcase">
+                <!-- Preview Box -->
+                <div class="preview-box">
+                    <h3>Preview</h3>
+                    <div class="preview-content">
+                        <button class="btn-primary">Primary Button</button>
+                        <button class="btn-secondary">Secondary Button</button>
+                        <button class="btn-danger">Delete</button>
+                    </div>
+                </div>
+                <!-- Code Box -->
+                <div class="code-box">
+                    <h3>Code <button class="copy-btn" onclick="copyCode('button-code')">Copy</button></h3>
+                    <pre><code id="button-code" class="language-html">
+<!-- Primary Button -->
+<button class="btn-primary">Primary Button</button>
+
+<!-- Secondary Button -->
+<button class="btn-secondary">Secondary Button</button>
+
+<!-- Danger Button -->
+<button class="btn-danger">Delete</button>
+                    </code></pre>
+                </div>
+            </div>
+            <div class="component-guide">
+                <h3>How to Use Buttons</h3>
+                <ul>
+                    <li>Use primary buttons for the main action.</li>
+                    <li>Use secondary buttons for less important actions.</li>
+                    <li>Use danger buttons for destructive actions like delete.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section id="cards" class="component-section">
+            <h2>Card Components</h2>
+            <div class="component-showcase">
+                <div class="preview-box">
+                    <h3>Preview</h3>
+                    <div class="preview-content">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200" alt="Placeholder" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">Card Title</h3>
+                                <p class="card-text">This is a sample card component with an image and text.</p>
+                                <button class="btn-primary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-box">
+                    <h3>Code <button class="copy-btn" onclick="copyCode('card-code')">Copy</button></h3>
+                    <pre><code id="card-code" class="language-html">
+<div class="card">
+    <img src="image-source.jpg" alt="Description" class="card-img">
+    <div class="card-body">
+        <h3 class="card-title">Card Title</h3>
+        <p class="card-text">Card description text goes here.</p>
+        <button class="btn-primary">Action</button>
+    </div>
+</div>
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add more sections for Grid and Navbar here -->
+
+    </main>
+
+    <footer class="footer">
+        <p>Built with ❤️ by <a href="https://github.com/yourusername" target="_blank">Your Name</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
