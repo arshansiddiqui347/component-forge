@@ -61,6 +61,52 @@ document.getElementById('generateBtn').addEventListener('click', () => {
 
     reader.readAsDataURL(file);
 });
+            // Replace YOUR_API_KEY with your secret key
+const OPENAI_API_KEY = "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";
+
+async function generateCodeFromDescription(description) {
+    const response = await fetch('https://api.openai.com/v1/completions', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${OPENAI_API_KEY}`
+        },
+        body: JSON.stringify({
+            model: 'text-davinci-003',
+            prompt: `Generate HTML/CSS code for this UI component: ${description}`,
+            max_tokens: 500,
+            temperature: 0.5
+        })
+    });
+
+    const data = await response.json();
+    return data.choices[0].text.trim();
+}
+
+// Generate button functionality
+document.getElementById('generateBtn').addEventListener('click', async () => {
+    const description = document.getElementById('uiDescription').value;
+    const preview = document.getElementById('generatedPreview');
+    const codeBox = document.getElementById('generatedCode');
+
+    if (!description) {
+        alert('Please describe the UI component first!');
+        return;
+    }
+
+    codeBox.textContent = 'Generating...';
+
+    try {
+        const generatedCode = await generateCodeFromDescription(description);
+        codeBox.textContent = generatedCode;
+        preview.innerHTML = generatedCode;
+    } catch (err) {
+        console.error(err);
+        alert('Error generating code. Try again.');
+        codeBox.textContent = '';
+    }
+});
+
 
         });
     });
