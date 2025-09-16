@@ -26,6 +26,42 @@ document.querySelectorAll('.nav-link').forEach(link => {
         targetElement.scrollIntoView({ 
             behavior: 'smooth',
             block: 'start'
+            // Existing copyCode and smooth scroll functions stay here
+
+// Code-to-Design functionality
+document.getElementById('generateBtn').addEventListener('click', () => {
+    const fileInput = document.getElementById('imageUpload');
+    const preview = document.getElementById('generatedPreview');
+    const codeBox = document.getElementById('generatedCode');
+
+    if (fileInput.files.length === 0) {
+        alert('Please upload an image first!');
+        return;
+    }
+
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        const imgData = e.target.result;
+
+        // Display the uploaded image in preview (simulated)
+        preview.innerHTML = `<img src="${imgData}" alt="Uploaded UI" style="max-width:100%; border: 2px dashed #fff;">`;
+
+        // Simulated generated code
+        const generatedHTML = `
+<!-- Generated Code for uploaded UI -->
+<div class="generated-component">
+    <img src="${imgData}" alt="Component" style="max-width:100%;">
+</div>
+        `.trim();
+
+        codeBox.textContent = generatedHTML;
+    }
+
+    reader.readAsDataURL(file);
+});
+
         });
     });
 });
